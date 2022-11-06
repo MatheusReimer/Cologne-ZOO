@@ -41,6 +41,6 @@ In this project we have a [server](./server) folder. This folder is used to orga
 
 In this project we also have tests. Make sure to run or create a new test before completing your task.
 
-In this project we use [storybook](./storybook). According to the docs: Storybook is a tool for UI development. It makes development faster and easier by isolating components. This allows you to work on one component at a time. You can develop entire UIs without needing to start up a complex dev stack, force certain data into your database, or navigate around your application.
+In this project we use [storybook](./.storybook). According to the docs: Storybook is a tool for UI development. It makes development faster and easier by isolating components. This allows you to work on one component at a time. You can develop entire UIs without needing to start up a complex dev stack, force certain data into your database, or navigate around your application.
 
 In this project we have also a main file that will run after the build is complete.That is: app.vue.

@@ -38,12 +38,13 @@ Please take stock fo the page using developer tools, your instincts, ... and wri
 
 // Your solution
 
-### 1
+```diff
++ SOLUTION 1
 
 Scrolling throw the files, it seems that the project structure was not that much affected. It seems at the first glance, that the hacking did not comprimised the layout of the folders structure.
 By opening a lot of the files, I could see a red warning from the IDE in the file animals. The problem was a typing issue on the variable that was about to be exported. I already fixed by changing "ANlMALS" to "ANIMALS". There are more warnings but I usually let the compiler tell me what to fix first.
 (next task)
-
+```
 ### Task 2: Get the basics running again
 
 Now that we know that is broken, let's try to get things running again, step by step. First we should aim to just get the project to start. Please fix the problem that stops `npm run dev` from working out. Then:
@@ -55,12 +56,13 @@ Zookeepers reported that the error sometimes changes when reloading the page aft
 
 // Your solution
 
-### 2
+```diff
++ SOLUTION 2
 
 We already fixed one of the issues in the previous task, but when running the app, the compiler said "alert is not defined" so by going to the actual file we could change "alert" to "console.log" or simply remove it.The problem is that, although we remove it, next time the file will be once again generated with this code.
 The issue here is that the compiler is warning about a build file, so I needed to see what the file was using as a source and change in the there,
 which was the file "app.vue". After that, the problem was solved.
-
+```
 ### Task 3: Start the documentation
 
 You got it to work! Nice, now the basic functionality is back for the zookeepers. This would be a great point to start on documenting the project. As you can see there is not even a readme file! The old IT Director seems to have left this project in bad shape. Please add documentation with basics on the project, how to start, stop, test, ... it and whatever else information you deem important.
@@ -69,7 +71,8 @@ Add your solution below, either as an inline text or link to new documentation f
 
 // Your solution
 
-### 3 - README
+```diff
++SOLUTION 3:
 
 ### Getting Started with the Cologne Zoo Website
 
@@ -98,15 +101,24 @@ Builds the app - Normally used before any deployment
 
 To stop a running app, just click on the terminal and press ctrl+c
 
+
+
+THE DOC WITH ALL THE INFORMATION(SOLUTION 3 + SOLUTION 9) IS
+BELOW ⬇️
+```
+[README FILE](./README.MD)
+
 ### Task 4: Test fixing
 
 There's a failing test that for the age calculation helper. Can you figure out what is broken in the implementation or the test it is and resolve the problem? All zookeepers are really interested in what is going on here.
 
 // Your solution
 
-### 4 - TESTS
+```diff
++ SOLUTION 4
 
 The test is failing because it's comparing the same date. So it's always going to be 0. And also, the math.round not necessarily round the number up. The best approach to do that would be using the "ceil" function.
+```
 
 ### Task 5: UI Fixing and Improvement
 
@@ -121,33 +133,41 @@ Please fix the two above problems and outline what was necessarry to do so.
 
 // Your solution
 
-### 5 - UI-FIX
+```diff
++ SOLUTION 5
 
 First I added the Name to the table simply by adding a new TAG(th) to it.Then, the column was there but the values were not, so I added a new argument to it, since every Animal necessarily has a name based on the interface in the file "types.d.ts".
 After that, the values were shown but the sorting was still based on the weight. I just made a new function to sort by the name and attributed the value to the same const that was already there "animalsSortedByName".
 Finally, I used the function when passing the variable birthday to the table. The only thing to notice here is that it needs to be converted to a string before creating a new Date otherwise, it will not work.
 
+
+
 ##IMPORTANT NOTE
 
 After this change to the UI, the test were failing. So, I needed to change the file
 TheAnimalTable.test.ts to be updated. After that, the tests were fine.
-
+```
 ### Task 6: UI Feature 1
 
 The zookeepers want to be able to see all details of an animal. Please create such a view that allows them to do so, outline anything about your process while adding the view below. The zookeepers didn't have time for more information, sorry. They'll surely be glad to criticize the first version intensly though and will want to know why you went for the approach you chose.
 
 // Your solution
 
-## UI Feature
+```diff
+
++ SOLUTION 6
 
 This assignment was in fact a little confusing but I guess that's the point of it 😅.
 What I did here was just add the remaining attributes to the table the same way I did in the previous UI task.
+
+
 
 ##IMPORTANT NOTE
 
 After this change to the UI, the test were failing. So, I needed to change the file
 TheAnimalTable.test.ts to be updated. After that, the tests were fine.
 
+```
 ### Task 7: Logic Feature
 
 The zookeepers want a new feature: Calculate the food required for the next calendar month. Basically, the zookeepers want to ease their job and buy a month worth of food in advance. In order to do so they want you to calculate and display the food all animals need for the next month.
@@ -164,10 +184,12 @@ To calculate the food an animal needs in kilograms in 1 day, the zookeepers use 
 
 // Your solution
 
-## New Feature - Solution
+```diff
+
++ SOLUTION 7
 
 As this is a simple feature that requires just a function I added a new function to the composable helper called "calculateFood". I also added a new test case to the file helpers.test.ts to make sure that the tests covers all the features.
-
+```
 ### Task 8: Plan New Feature
 
 After the disastrous specification of the new UI feature in the previous task, the zooplanners now want to sit down with you to plan the next feature better before implementation begins. Together you come up with requirements that you write down from the user-perspective (the zookeepers):
@@ -194,7 +216,9 @@ Don't spend more thatn 15-30 minutes here - planning like this can quickly becom
 
 // Your solution
 
-## Comments on - new Feature
+```diff
+
++ SOLUTION 8
 
 First of all we need to map where in the zoo every animal is and the distance between them, to not make the pet feeder to keep walking unnecessarily.
 
@@ -210,13 +234,18 @@ In concern of the UI, I think it would be good if the employee could see other d
 
 We would also need to add the hour of the task for the user.
 
+```
+
 ### Task 9: Finish the documentation
 
 Revisit docs from step 3, see if you want to add anything. Also think about bonuses. Add a general comment about anything (inside the universe of the challenge or out of it) if you want to.
 
 // Your solution
 
-## MY DOCS
+
+```diff
+
++ SOLUTION 9
 
 The vue.js project structure is based on components. When developing a new feature, don't be afraid to create a new one or use the ones that were already created.
 
@@ -231,3 +260,5 @@ In this project we also have tests. Make sure to run or create a new test before
 In this project we use storybook. According to the docs: Storybook is a tool for UI development. It makes development faster and easier by isolating components. This allows you to work on one component at a time. You can develop entire UIs without needing to start up a complex dev stack, force certain data into your database, or navigate around your application.
 
 In this project we have also a main file that will run after the build is complete.That is: app.vue.
+
+```

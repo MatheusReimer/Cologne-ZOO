@@ -44,3 +44,14 @@ In this project we also have tests. Make sure to run or create a new test before
 In this project we use [storybook](./.storybook). According to the docs: Storybook is a tool for UI development. It makes development faster and easier by isolating components. This allows you to work on one component at a time. You can develop entire UIs without needing to start up a complex dev stack, force certain data into your database, or navigate around your application.
 
 In this project we have also a main file that will run after the build is complete.That is: app.vue.
+
+
+## Before creating/changing any features or if you have any questions:
+
+- Read this file again 😅
+- See the vue.js docs <a href="https://vuejs.org/guide/introduction.html" target="_blank">here</a>
+- See typescript docs  <a href="https://www.typescriptlang.org/docs/" target="_blank">here</a> 
+- See tailwind docs <a href="https://v2.tailwindcss.com/docs" target="_blank">here</a> 
+
+If you still have doubts, contact me.
+

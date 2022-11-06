@@ -55,3 +55,4 @@ In this project we have also a main file that will run after the build is comple
 
 If you still have doubts, contact me.
 
+<i>Note: This is an assignment passed by SIDESTREAM and the rest of the relevant information about it are described in [this](./TASKS.md) file</i>

@@ -35,7 +35,7 @@ The vue.js project structure is based on components. When developing a new featu
 
 In this project we organize also the functions in a way that they can be reuse throughout the whole project in the folder of composables.
 
-In this project we also have an assets folder that are mainly static files like Images, video, other things that aren't code, markup, or configuration.
+In this project we also have an [assets](./assets) folder that are mainly static files like Images, video, other things that aren't code, markup, or configuration.
 
 In this project we have a server folder. This folder is used to organize the files that are related to having requests and responses to the application.
 
